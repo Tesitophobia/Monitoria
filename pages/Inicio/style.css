@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 @font-face {
@@ -24,8 +25,8 @@ nav{
 
     ul{
         display: flex;
-        width: 40vw;
-        height: 6vh;
+        width: 800px;
+        height: 3.5em;
         gap: 10em;
         margin-top: 1em;
         justify-content: center;
@@ -77,8 +78,8 @@ header{
     article{
 
         background-color: #bebebe;
-        width: 25vw;
-        height: 30vh;
+        width: 500px;
+        height: 280px;
         border-radius: 15px;
     }
 
@@ -125,6 +126,14 @@ header{
     }
 }
 
+.sectprocess{
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+}
+
 #sc2{
     display: flex;
     justify-content: center;
@@ -161,11 +170,11 @@ header{
     flex-direction: column;
     align-items: center;
     margin-top: 5em;
-    height: 80vh;
+    height: 850px;
 
     div{
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         flex-direction: column;
     }
 
@@ -200,11 +209,13 @@ header{
    }
 }
 
+
 #proceso{
 display: flex;
 justify-content: center;
 align-items: flex-start;
 padding-left: 25%;
+margin-top: 5em;
 }
 
 
@@ -257,7 +268,7 @@ p{
 .information{
     display: flex;
     justify-content: center;
-    margin-left: -12em ;
+    margin-left: -4em;
 }
 
 #what{
@@ -335,7 +346,7 @@ footer{
     align-items: center;
     margin-top: 5em;
     gap: 2em;
-    height: 30vh;
+    height: 300px;
     background-size: cover;
     background-image: url(assets/Footer.png);
 
