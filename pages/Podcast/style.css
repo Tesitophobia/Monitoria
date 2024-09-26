@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: DMSans;
+    src: url(fonts/DMSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: DMSansB;
+    src: url(fonts/DMSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: DmSansLight;
+    src: url(fonts/DMSans-Light.ttf);
+}
+
+body{
+    font-family: DMSansB;
+    font-weight: bold;
+}
+
+header{
+    background-image: url(assets/Banner.jpg);
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+}
+
+nav{
+
+    display: grid;
+    place-content: center;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+
+    ul{
+        display: flex;
+        width: 800px;
+        height: 3.5em;
+        gap: 10em;
+        margin-top: 1em;
+        justify-content: center;
+        align-items: center;
+        border-radius: 99px;
+        background: rgba( 215, 255, 221, 0.55 );
+        border: 1px solid #50FF6A;
+        backdrop-filter: blur( 8px );
+        list-style-type: none;
+
+        li:first-child{
+            margin-left: -3em;
+        }
+
+        button{
+            width: 100px;
+            height: 32px;
+            border-radius: 99px;
+            border: none;
+            background:none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .active{
+            background-color: #50ff6ab2;
+        }
+
+        button:hover{
+            background-color: #50FF6A;
+            transition: 0.5s;
+        }
+        }
+}
+
+main{
+    display: grid;
+    margin-top: 4em;
+    grid-template-columns: 60% 40%;
+    grid-template-areas: 
+    "principal podcast"
+    "socials podcast"
+    "invitados podcast"
+    "integrantes a";
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: podcast;
+
+    iframe{
+        margin-top: 1em;
+    }
+
+    h3{
+        margin-top: 1em;
+    }
+}
+
+.informacion{
+    grid-area: principal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+
+    h2{
+        font-size: 36px;
+    }
+    
+    p{
+        font-family: DmSansLight;
+        text-align: justify;
+        width: 60%;
+        margin-top: 2em;
+
+        b{
+            font-family: DmSansB;
+        }
+    }
+
+
+}
+
+.rpodcast{
+    margin-top: 3em;
+    grid-area: socials;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.links{
+    margin-top: 1em;
+    display: flex;
+    gap: 2em;
+}
+
+.invitados{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    grid-area: invitados;
+    margin-top: 3em;
+}
+
+.invites{
+    display: flex;
+    gap: 2em;
+    margin-top: 2em;
+    
+    div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    picture{
+        padding: 1.3em 1.3em 1em 1.3em;
+        border-radius: 10px;
+        background-color: #bfbfbf;
+    }
+}
+
+.integrantes{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    grid-area: integrantes;
+    margin-top: 3em;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5em;
+    gap: 2em;
+    height: 300px;
+    background-size: cover;
+    background-image: url(assets/Footer.png);
+
+    div{
+        display: flex;
+        align-items: center;
+        gap: 1em;
+    }
+
+    img{
+        width: 30px;
+        height: 30px;
+    }
+
+    h1{
+        font-size: 20px;
+    }
+
+    span{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    a{
+        text-decoration: none;
+        color: black;
+        transition: .5s;
+    }
+
+    a:hover{
+        transform: scale(1.1);
+    }
+
+}
