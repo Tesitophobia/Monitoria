@@ -95,108 +95,88 @@ nav{
 
 main{
     display: grid;
-    margin-top: 4em;
     grid-template-columns: 60% 40%;
-    grid-template-areas: 
-    "principal podcast"
-    "socials podcast"
-    "invitados podcast"
-    "integrantes a";
-}
+    grid-template-rows: 12em 20em 30em;
+    grid-template-areas:
+    "why images"
+    "process images"
+    "goals images";
+    margin-top: 3em;
 
-aside{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    grid-area: podcast;
+     .imagenes{
+        grid-area: images ;
+        gap: 2em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 40%;
+        }
+     }
 
-    iframe{
-        margin-top: 1em;
+     article{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        grid-area: why;
+        
+        h2{
+            font-size: 36px;
+        }
+
+        p{
+            text-align: justify;
+            margin-top: 2em;
+            font-family: DmSansLight;
+            width: 70%;
+        }
+
+    }
+    .proceso{
+        grid-area: process;
+        margin-top: 3em;
     }
 
-    h3{
-        margin-top: 1em;
-    }
-}
-
-.informacion{
-    grid-area: principal;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-
-    h2{
-        font-size: 36px;
-    }
-    
-    p{
-        font-family: DmSansLight;
-        text-align: justify;
-        width: 60%;
+    .goals{
+        display: flex;
+        flex-direction: column;
         margin-top: 2em;
+        align-items: center;
+        grid-area: goals;
 
-        b{
-            font-family: DmSansB;
+        aside{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h2{
+            font-size: 36px;
+        }
+
+        h4{
+            font-size: 20px;
+            margin-top: 1em;
+        }
+
+        progress{
+            margin-top: 1em;
+            width: 40em;
+            height: 3em;;
         }
     }
 
-
 }
 
-.rpodcast{
-    margin-top: 3em;
-    grid-area: socials;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
-.links{
-    margin-top: 1em;
-    display: flex;
-    gap: 2em;
-}
-
-.invitados{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    grid-area: invitados;
-    margin-top: 3em;
-}
-
-.invites{
-    display: flex;
-    gap: 2em;
-    margin-top: 2em;
     
-    div{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
 
-    picture{
-        padding: 1.3em 1.3em 1em 1.3em;
-        border-radius: 10px;
-        background-color: #bfbfbf;
-    }
-}
 
-.integrantes{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    grid-area: integrantes;
-    margin-top: 3em;
-}
+
+
 
 footer{
     display: flex;
