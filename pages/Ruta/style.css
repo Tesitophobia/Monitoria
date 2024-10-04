@@ -223,6 +223,39 @@ footer{
 
 }
 
+@media only screen and (max-width: 1050px) {
+
+    main{
+        grid-template-columns: 100%;
+        grid-template-rows: 17em 20em 14em;
+        grid-template-areas:
+        "why"
+        "process"
+        "images"
+        "goals";
+
+        .imagenes{
+            grid-area: images ;
+            display: flex;
+            flex-direction: row;
+
+            img{
+                width: 28%;
+            }
+
+            img:first-child{
+                display: none;
+            }
+
+            img:nth-child(5){
+                display: none;
+            }
+        }
+    }
+
+
+}
+
 
 @media only screen and (max-width: 800px) {
 
@@ -243,7 +276,7 @@ footer{
 
     .menu{
         display: flex;
-        position: absolute;
+        position: fixed;
         border: 1px solid #176b254f;
         background-color: #50ff6a65;
         backdrop-filter: blur( 8px );
@@ -256,6 +289,10 @@ footer{
             width: 48px;
         }
 
+        label{
+            z-index: 99;
+        }
+
     }
 
     input[type="checkbox"]{
@@ -265,14 +302,15 @@ footer{
     #check:checked ~ aside{
         display: flex;
         position: absolute;
-        top: 3.8em;
-        right: 0em;
+        top: -1em;
+        right: -1em;
         justify-content: center;
         align-items: center;
         background-color: #ffffff;
-        width: 10em;
-        height: 10em;
-        border-radius: 10px;
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur( 8px );
+        width: 20em;
+        height: 60em;
     }
 .menu{
     .movil{
@@ -282,12 +320,30 @@ footer{
         border: none;
         height: 2em;
         border-radius: 0;
-        background: none;
         backdrop-filter: blur(0px);
-        margin-top: 10em;
+        margin-top: 0em;
 
         li{
-            margin-top: -10em;
+            margin-top: -5em;
         }
     }
+}
+}
+
+@media only screen and (max-width: 660px) {
+    main{
+
+        grid-template-rows: 30em 20em 14em;
+        .goals{
+            progress{
+                width: 20em;
+            }
+        }
+    }
+
+    h1{
+        font-size: 36px;
+    }
+    
+    
 }

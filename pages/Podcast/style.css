@@ -104,6 +104,10 @@ main{
     "integrantes a";
 }
 
+.trailer{
+    display: none;
+}
+
 aside{
     display: flex;
     flex-direction: column;
@@ -244,6 +248,31 @@ footer{
 }
 
 
+@media only screen and (max-width: 1050px) {
+
+    main{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        "principal"
+        "socials"
+        "invitados"
+        "integrantes";
+    }
+
+    aside{
+        display: none;
+    }
+    .trailer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+
 @media only screen and (max-width: 800px) {
 
     nav{
@@ -310,4 +339,74 @@ footer{
             margin-top: -10em;
         }
     }
+}
+}
+
+
+@media only screen and (max-width: 700px) {
+
+    .integrantes{
+        display: grid;
+        place-items: center;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+        "int1 int1"
+        "int2 int3";
+
+        h2{
+            grid-area: int1;
+        }
+
+        .invites{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .invites:nth-child(2){
+            grid-area: int2;
+        }
+
+        .invites:nth-child(3){
+            grid-area: int3;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    h1{
+        font-size: 48px;
+    }
+
+    .invites{
+        display: flex;
+        gap: 2em;
+        margin-top: 2em;
+        
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    
+        picture{
+            display: flex;
+            justify-content: center;    
+            align-items: center;
+
+            border-radius: 10px;
+            background-color: #bfbfbf;
+
+            img{
+                width: 80%;
+            }
+        }
+    }
+
+    footer{
+        text-align: center;
+    }
+
 }
